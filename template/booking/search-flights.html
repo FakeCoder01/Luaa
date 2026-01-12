@@ -65,7 +65,7 @@
 
                                     <svg class="fill-current text-gray-800 mr-2 w-5" xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 24 24" width="24" height="24">
-                                        <path class="heroicon-ui" 
+                                        <path class="heroicon-ui"
                                             d="M14 5.62l-4 2v10.76l4-2V5.62zm2 0v10.76l4 2V7.62l-4-2zm-8 2l-4-2v10.76l4 2V7.62zm7 10.5L9.45 20.9a1 1 0 0 1-.9 0l-6-3A1 1 0 0 1 2 17V4a1 1 0 0 1 1.45-.9L9 5.89l5.55-2.77a1 1 0 0 1 .9 0l6 3A1 1 0 0 1 22 7v13a1 1 0 0 1-1.45.89L15 18.12z" />
                                     </svg>
 
@@ -76,7 +76,7 @@
                                         class="bg-red-100 cursor-pointer max-w-full focus:outline-none text-gray-700"
                                         required />
 
-                                        
+
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 gap-2 border border-gray-200 p-2 rounded">
@@ -159,8 +159,8 @@
         <div class="mt-2 lg:mx-12 sm:mx-12">
             <hr>
             <div class=" p-1 bg-gray-100 ">
-                <h1 class="uppercase inline font-bold text-gray-500 pl-1">Total <span id="flight_count">(loading..)</span>
-                    flights found</h1>
+                <h1 class="uppercase inline font-bold text-gray-500 pl-1">Loading <span id="flight_count"> top </span>
+                    flights</h1>
                 <div class="bg-gray-500 cursor-pointer right-0 mr-4" style="float: right;">
                     <select name="sort_key" class="cursor-pointer font-semibold text-violet-500 bg-green-50"
                         id="sort_key" onchange="sort_filter();">
@@ -175,7 +175,7 @@
 
         <div class="search-results">
             <div class="display-results w-600 lg:mx-10 sm:mx-6" id="search-flights">
-               
+
 
             </div>
         </div>
@@ -183,10 +183,6 @@
 
 
 
-
     <script src="{% static '/js/search-flights.js' %}"></script>
+    <script src="{% static '/js/home-flights.js' %}"></script>
     {% include 'booking/sections/footer.html' %}
-
-
-
-
