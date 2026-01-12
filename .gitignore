@@ -8,5 +8,7 @@ migrations/
 .env.copy
 .env
 .zip
-.venv/
+venv/
 yt.py
+cc.py
+.vscode/
