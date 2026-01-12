@@ -8,4 +8,5 @@ migrations/
 .env.copy
 .env
 .zip
-venv/
+.venv/
+yt.py
