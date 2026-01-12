@@ -1,6 +1,7 @@
 {% include 'manage/sections/header.html' %}
 {% load static %}
 
+<!-- Manager Page -->
 <title>Chat Support | Luaa</title>
 <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"></script>
 <script src="/static/js/manage-chat.js"></script>
@@ -23,7 +24,7 @@
                 <div class="alerts-list absolute right-0 mr-4">
                     {% for message in messages %}
                     <div onclick="this.style.display='none';"
-                        class="p-2 bg-blue-200 text-blue-800 cursor-pointer p-4 text-sm rounded border border-blue-300 my-3">
+                        class="bg-blue-200 text-blue-800 cursor-pointer p-4 text-sm rounded border border-blue-300 my-3">
                         {{message}}
                     </div>
                     {% endfor %}
@@ -33,7 +34,7 @@
 
                 <div class="flex flex-wrap bg-black-500 items-center px-5 pt-3">
                     <div class="relative w-full max-w-full flex-grow flex-1">
-                        <h3 class="font-semibold pr-20 text-xl mr-20 inline-block text-base text-gray-900 dark:text-gray-50 mb-2">Chat Support
+                        <h3 class="font-semibold pr-20 mr-20 inline-block text-base text-gray-900 dark:text-gray-50 mb-2">Chat Support
                         </h3>
                         <button class="px-3 py-1 rounded font-semibold text-white ml-20 bg-green-500 hover:bg-green-600" onclick="javascript:ChatGroupShowAndRefresh();">Refresh</button>
                     </div>
@@ -45,20 +46,22 @@
 
 
                 <!-- Component Start -->
-                <div class="flex flex-grow pt-4 justify-center w-full min-h-screen bg-gray-100 text-gray-800 ">
-                    
-                    <div style="width: 400px; overflow-y: scroll; overflow-x: hidden;"
-                        class="mr-10 xs:mr-3 md:mr-3">
+                <div class="flex flex-grow pt-4 w-full min-h-screen bg-gray-100 text-gray-800 ">
+
+                    <div style="width: 350px; overflow-y: scroll; overflow-x: hidden;"
+                        class="mr-10 xs:mr-3 md:mr-3 ml-3 ">
                         <ul class="bg-slate-900 p-2" id="chat-message-group-list-area">
 
-                     
+
                         </ul>
                     </div>
 
                     <!-- Component Start -->
                     <div
-                        class="flex flex-col flex-grow w-full mr-2 max-w-xl bg-red-100 shadow-xl rounded-lg overflow-hidden">
-                        Select to continue
+                        class="flex flex-col flex-grow w-full mr-2 pl-6 pt-8 max-w-xl bg-red-100 shadow-xl rounded-lg overflow-hidden">
+                        <span>- Select to continue <br></span>
+                        <span> - Click on a user to chat with him/her <br></span>
+                        <span> - To start new a chat go to <em><b>Users</b></em> & select the user, then click <em><b>Chat</b></em> </span>
                     </div>
                     <!-- Component End  -->
 
