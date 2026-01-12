@@ -1,5 +1,4 @@
 {% include 'manage/sections/header.html' %}
-{% load static %}
 <!-- Manager Page-->
     <title>Chat Support | Luaa</title>
     <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"></script>
@@ -108,10 +107,10 @@
                                 <div class="bg-red-600 text-white p-3 rounded-l-lg rounded-br-lg">
                                      <p class="text-sm">${data.message} </p>
                                 </div>
-                                <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                                <span class="text-xs text-gray-500 leading-none">${data.time_ago} </span>
                             </div>
                             <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300">
-                                <img src="{% static '/images/logo/logo-icon.png' %}" alt="Icon" class="h-10 w-10 rounded-full" srcset="">
+                                <img src="/static/images/logo/logo-icon.png" alt="Icon" class="h-10 w-10 rounded-full" srcset="">
                             </div>
                         </div>`
                     );
@@ -119,12 +118,12 @@
                 else if (data.sender === 'user') {
                     messages.insertAdjacentHTML('beforeend',
                         `<div class="flex w-full mt-2 space-x-3 max-w-xs">
-                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-red-300"></div>
                             <div>
                                 <div class="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
                                     <p class="text-sm">${data.message}</p>
                                 </div>
-                                <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                                <span class="text-xs text-gray-500 leading-none">${data.time_ago}</span>
                             </div>
                         </div> `
                     );
